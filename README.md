@@ -15,3 +15,11 @@ The NAMA Foray generates several hundred specimens in a small region.
 - Modern Python, the script is tested on Fedora 38 with Python 3.11.3
 - openpyxl, pandas and pyinaturalist packages installed with pip `pip install -r requirements.txt`
 - An active iNaturalist user session (log in on the website)
+
+## Common Issues
+```
+(venv) (base) [dmccheyne@fedora iNat_util]$ ./inat_util.py update-vouchers --file ./test.xlsx 
+Error updating observation 135081729 field 2863 with value DMc001. Error: HTTPSConnectionPool(host='api.inaturalist.org', port=443): Read timed out. (read timeout=10)
+Error updating observation 135081729 field 15425 with value No. Error: HTTPSConnectionPool(host='api.inaturalist.org', port=443): Read timed out. (read timeout=10)
+```
+This generally means your token is expired and needs to be updated. Refresh the page and update your envvar to the new token.

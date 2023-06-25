@@ -41,7 +41,8 @@ def update_vouchers(api_token, filename):
                         observation_id=observation_id,
                         observation_field_id=column,  # The column header is assumed to be the Observation Field ID
                         value=value,
-                        access_token=api_token
+                        access_token=api_token,
+                        timeout=20 # Increase the timeout to 20 seconds to avoid timeouts on large files
                     )
                     # Check the response and print a success or failure message
                     if response:
