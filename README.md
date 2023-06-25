@@ -13,5 +13,5 @@ The NAMA Foray generates several hundred specimens in a small region.
 
 ## Requirements
 - Modern Python, the script is tested on Fedora 38 with Python 3.11.3
-- pandas and pyinaturalist packages installed with pip
+- openpyxl, pandas and pyinaturalist packages installed with pip `pip install -r requirements.txt`
 - An active iNaturalist user session (log in on the website)
